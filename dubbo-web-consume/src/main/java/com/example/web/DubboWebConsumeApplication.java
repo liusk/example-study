@@ -1,8 +1,9 @@
 package com.example.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.RegistryConfig;
-import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -10,8 +11,9 @@ import org.springframework.context.annotation.Bean;
 /**
  * @author liusk
  */
+
+@Slf4j
 @EnableDubbo
-@DubboComponentScan
 @SpringBootApplication
 public class DubboWebConsumeApplication {
 
@@ -19,10 +21,14 @@ public class DubboWebConsumeApplication {
         SpringApplication.run(DubboWebConsumeApplication.class, args);
     }
 
+    @Value("${dubbo.registry.address}")
+    private String address;
+
     @Bean
     public RegistryConfig registryConfig() {
+        log.info("============== address =============:{}", address);
         RegistryConfig registryConfig = new RegistryConfig();
-        registryConfig.setAddress("zookeeper://127.0.0.1:2181");
+        registryConfig.setAddress("nacos://127.0.0.1:8848");
         return registryConfig;
     }
 }

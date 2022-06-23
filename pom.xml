@@ -27,7 +27,7 @@
         <revision>1.0-SNAPSHOT</revision>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <dubbo.version>3.0.0</dubbo.version>
+        <dubbo.version>3.0.8</dubbo.version>
     </properties>
 
     <dependencies>
