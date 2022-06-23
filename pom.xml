@@ -6,11 +6,12 @@
 
     <groupId>study.example</groupId>
     <artifactId>example-study</artifactId>
-    <version>${project.build.versio}</version>
+    <version>${revision}</version>
 
     <modules>
         <module>dubbo-web-consume</module>
         <module>dubbo-order-provider</module>
+        <module>dubbo-api</module>
     </modules>
 
     <parent>
@@ -23,9 +24,17 @@
     <packaging>pom</packaging>
 
     <properties>
-        <project.build.version>1.0-SNAPSHOT</project.build.version>
+        <revision>1.0-SNAPSHOT</revision>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <dubbo.version>3.0.0</dubbo.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
