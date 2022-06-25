@@ -13,14 +13,14 @@ import java.util.List;
  * @author liusk
  */
 @Slf4j
-@DubboService(version = "1.0.0", group = "g1")
-public class OrderServiceImpl implements IOrderService {
+@DubboService(version = "1.0.0", group = "g2")
+public class OrderG2ServiceImpl implements IOrderService {
     @Override
     public List<OrderDTO> getOrder() {
         String name = RpcContext.getServiceContext().getAttachment("name");
         log.info("============ 调用OrderServiceImpl:什么玩意:" + name);
-        log.info("============ 调用OrderServiceImpl:什么玩意");
-        OrderDTO orderDTO = new OrderDTO("g1", "什么玩意");
+        log.info("============ 调用OrderG2ServiceImpl:G12什么玩意");
+        OrderDTO orderDTO = new OrderDTO("g2", "G12什么玩意");
         return Lists.newArrayList(orderDTO);
     }
 }
