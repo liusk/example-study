@@ -40,7 +40,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-registry-nacos</artifactId>
+            <artifactId>dubbo-registry-zookeeper</artifactId>
             <version>${dubbo.version}</version>
         </dependency>
 

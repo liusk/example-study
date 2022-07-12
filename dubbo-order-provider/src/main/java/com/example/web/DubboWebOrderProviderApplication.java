@@ -22,7 +22,7 @@ public class DubboWebOrderProviderApplication {
     @Bean
     public RegistryConfig registryConfig() {
         RegistryConfig registryConfig = new RegistryConfig();
-        registryConfig.setAddress("nacos://127.0.0.1:8848");
+        registryConfig.setAddress("zookeeper://127.0.0.1:2181");
         return registryConfig;
     }
 }

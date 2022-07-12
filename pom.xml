@@ -12,6 +12,10 @@
         <module>dubbo-web-consume</module>
         <module>dubbo-order-provider</module>
         <module>dubbo-api</module>
+        <module>java-proxy</module>
+        <module>hello-annotation</module>
+        <module>hello-processor</module>
+        <module>hello-invoke</module>
     </modules>
 
     <parent>
